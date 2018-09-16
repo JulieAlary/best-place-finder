@@ -19,7 +19,7 @@ In the near future, other APIs will complete the project.
 **To make this project yours, just do :**
 
 ~~~
-git clone
+git clone https://github.com/JulieAlary/best-place-finder.git
 ~~~
 
 After go to => [Create quickly a developer account in Yelp](https://www.yelp.com/login?return_url=%2Fdevelopers%2Fv3%2Fmanage_app )
