@@ -17,7 +17,7 @@
 
 .SearchBar-sort-options li {
 	cursor: pointer;
-	width: 4.33rem;
+	/*width: 4.33rem;*/
 	border-bottom: 1px solid palevioletred;
 	padding: 0 2.58rem 0.33rem 2.58rem;
 	line-height: 1.13;

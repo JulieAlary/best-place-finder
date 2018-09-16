@@ -5,27 +5,35 @@ class Place extends React.Component {
     render() {
         return (
             <div className="Place">
-                <div className="image-container">
-                    <img src={this.props.place.imageSrc} alt=""/>
-                </div>
-                <h2>{this.props.place.name}</h2>
+                <div className="row">
+                    <div className="card">
+                        <div className="card-header">
+                            <h2>{this.props.place.name}</h2>
+                            <h6 className="text-right"><span
+                                className="badge badge-secondary">{this.props.place.category}</span></h6>
+                        </div>
 
-                <div className="Place-information">
+                        <div className="card-body">
+                            <img src={this.props.place.imageSrc} alt="" className="img-thumbnail"/>
 
-                    <div className="Place-address">
-                        <p>{this.props.place.address}</p>
-                        <p>{this.props.place.city}</p>
-                        <p>{`${this.props.place.state} ${
-                            this.props.place.zipCode
-                            }`}</p>
-                    </div>
-
-                    <div className="Place-reviews">
-                        <h4>{this.props.place.category.toUpperCase()}</h4>
-                        <h4 className="rating">{`${
-                            this.props.place.rating
-                            }`}  <i className="fa fa-star" aria-hidden="true"></i></h4>
-                        <p>{`${this.props.place.reviewCount} reviews`}</p>
+                            <div className="Place-information">
+                                <div className="Place-address">
+                                    <address>
+                                        <strong>{this.props.place.name}</strong><br/>
+                                        {this.props.place.address}<br/>
+                                        {this.props.place.city}, ({this.props.place.state}) {
+                                        this.props.place.zipCode}<br/>
+                                        <i className="fa fa-phone" aria-hidden="true"></i> {this.props.place.displayPhone}
+                                    </address>
+                                </div>
+                                <div className="Place-reviews">
+                                    <h4 className="rating">{`${this.props.place.rating}`}
+                                        <i className="fa fa-star" aria-hidden="true"></i>
+                                    </h4>
+                                    <p>{`${this.props.place.reviewCount} reviews`}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

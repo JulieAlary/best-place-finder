@@ -8,21 +8,25 @@
     margin: 0 0.5rem 2.3rem 0.5rem;
 }
 
-.Place .image-container {
-    height: 16.66rem;
-    margin-bottom: 1rem;
-}
-
 .Place h2 {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
     font-weight: 600;
 }
 
+.badge-secondary {
+   background-color: hotpink!important;
+}
+
 .Place-information {
     display: flex;
     justify-content: space-between;
+    margin-top: 15px;
+
 }
+/*.img-thumbnail {*/
+    /*border-bottom-color: black!important;*/
+/*}*/
 
 .Place-information p {
     font-size: 0.88rem;

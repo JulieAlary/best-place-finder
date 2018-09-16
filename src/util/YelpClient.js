@@ -1,4 +1,4 @@
-const apiKey = 'Replace by your Yelp api key';
+const apiKey = 'PtB7jR4u37EhSVYMluR0aKbkMxTlLrF39pBXp5YZ_QmDwbCpmTHg1-HvQQMdXjWG_nO--Oqn5zDqvsW5A4w2j8u_b6agzMgHZd_1V3j3pbe_bkZk6wF0grxHK0qeW3Yx';
 
 const Yelp = {
     search(term, location, sortBy) {
@@ -10,17 +10,18 @@ const Yelp = {
             return response.json();
         }).then(jsonResponse => {
             if (jsonResponse.businesses) {
-                return jsonResponse.businesses.map(business => ({
-                        id: business.id,
-                        imageSrc: business.image_url,
-                        name: business.name,
-                        address: business.location.address1,
-                        city: business.location.city,
-                        state: business.location.state,
-                        zipCode: business.location.zip_code,
-                        category: business.categories[0].title,
-                        rating: business.rating,
-                        reviewCount: business.review_count
+                return jsonResponse.businesses.map(place => ({
+                        id: place.id,
+                        imageSrc: place.image_url,
+                        name: place.name,
+                        address: place.location.address1,
+                        city: place.location.city,
+                        state: place.location.state,
+                        zipCode: place.location.zip_code,
+                        category: place.categories[0].title,
+                        rating: place.rating,
+                        reviewCount: place.review_count,
+                        displayPhone: place.display_phone
                     }
                 ));
             }
